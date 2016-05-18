@@ -58,8 +58,8 @@ def test():
     data = extract_carriers(html_page)
     print data
     
-    pageInfo = make_request(data)
-    print pageInfo
+    #pageInfo = make_request(data)
+    #print pageInfo
 #    assert len(data) == 16
 #    assert "FL" in data
 #    assert "NK" in data

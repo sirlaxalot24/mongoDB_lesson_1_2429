@@ -25,7 +25,7 @@ def extract_carriers(page):
 
     with open(page, "r") as html:
         # do something here to find the necessary values
-        soup = BeautifulSoup(html)
+        soup = BeautifulSoup(html, "lxml")
         cL = soup.find(id="CarrierList")
         for option in cL.find_all('option'):
             if option['value'] != 'AllUS' and option['value'] != 'AllForeign' and option['value'] != 'All':
