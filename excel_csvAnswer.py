@@ -6,9 +6,9 @@
 import xlrd
 import os
 import csv
-datafile = 'C:\Users\jpaukov\Documents\Udacity\mongoDB\mongoDB_lesson_1_2429\J2013_ERCOT_Hourly_Load_Data.xls'
-filename = 'C:\Users\jpaukov\Documents\Udacity\mongoDB\mongoDB_lesson_1_2429\Testrun.csv'
-outfile = 'C:\Users\jpaukov\Documents\Udacity\mongoDB\mongoDB_lesson_1_2429\2013_Max_Loads.csv'
+datafile = r'C:\Users\jpaukov\Documents\Udacity\mongoDB\mongoDB_lesson_1_2429\J2013_ERCOT_Hourly_Load_Data.xls'
+filename = r'C:\Users\jpaukov\Documents\Udacity\mongoDB\mongoDB_lesson_1_2429\Testrun.csv'
+outfile = r'C:\Users\jpaukov\Documents\Udacity\mongoDB\mongoDB_lesson_1_2429\2013_Max_Loads.csv'
 
 
 def parse_file(datafile):
