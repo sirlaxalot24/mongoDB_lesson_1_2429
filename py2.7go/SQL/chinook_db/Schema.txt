@@ -1,0 +1,89 @@
+C:\Users\japau\Anaconda3\envs\udacityPY\python.exe "C:/Users/japau/Google Drive/Udacity/MongoDB/mongoDB_lesson_1_2429/py2.7go/SQL/chinook_db/chinookExplorer.py"
+Album
+(u'AlbumId', u'INTEGER', 1, None, 1)
+(u'Title', u'NVARCHAR(160)', 1, None, 0)
+(u'ArtistId', u'INTEGER', 1, None, 0)
+
+Artist
+(u'ArtistId', u'INTEGER', 1, None, 1)
+(u'Name', u'NVARCHAR(120)', 0, None, 0)
+
+Customer
+(u'CustomerId', u'INTEGER', 1, None, 1)
+(u'FirstName', u'NVARCHAR(40)', 1, None, 0)
+(u'LastName', u'NVARCHAR(20)', 1, None, 0)
+(u'Company', u'NVARCHAR(80)', 0, None, 0)
+(u'Address', u'NVARCHAR(70)', 0, None, 0)
+(u'City', u'NVARCHAR(40)', 0, None, 0)
+(u'State', u'NVARCHAR(40)', 0, None, 0)
+(u'Country', u'NVARCHAR(40)', 0, None, 0)
+(u'PostalCode', u'NVARCHAR(10)', 0, None, 0)
+(u'Phone', u'NVARCHAR(24)', 0, None, 0)
+(u'Fax', u'NVARCHAR(24)', 0, None, 0)
+(u'Email', u'NVARCHAR(60)', 1, None, 0)
+(u'SupportRepId', u'INTEGER', 0, None, 0)
+
+Employee
+(u'EmployeeId', u'INTEGER', 1, None, 1)
+(u'LastName', u'NVARCHAR(20)', 1, None, 0)
+(u'FirstName', u'NVARCHAR(20)', 1, None, 0)
+(u'Title', u'NVARCHAR(30)', 0, None, 0)
+(u'ReportsTo', u'INTEGER', 0, None, 0)
+(u'BirthDate', u'DATETIME', 0, None, 0)
+(u'HireDate', u'DATETIME', 0, None, 0)
+(u'Address', u'NVARCHAR(70)', 0, None, 0)
+(u'City', u'NVARCHAR(40)', 0, None, 0)
+(u'State', u'NVARCHAR(40)', 0, None, 0)
+(u'Country', u'NVARCHAR(40)', 0, None, 0)
+(u'PostalCode', u'NVARCHAR(10)', 0, None, 0)
+(u'Phone', u'NVARCHAR(24)', 0, None, 0)
+(u'Fax', u'NVARCHAR(24)', 0, None, 0)
+(u'Email', u'NVARCHAR(60)', 0, None, 0)
+
+Genre
+(u'GenreId', u'INTEGER', 1, None, 1)
+(u'Name', u'NVARCHAR(120)', 0, None, 0)
+
+Invoice
+(u'InvoiceId', u'INTEGER', 1, None, 1)
+(u'CustomerId', u'INTEGER', 1, None, 0)
+(u'InvoiceDate', u'DATETIME', 1, None, 0)
+(u'BillingAddress', u'NVARCHAR(70)', 0, None, 0)
+(u'BillingCity', u'NVARCHAR(40)', 0, None, 0)
+(u'BillingState', u'NVARCHAR(40)', 0, None, 0)
+(u'BillingCountry', u'NVARCHAR(40)', 0, None, 0)
+(u'BillingPostalCode', u'NVARCHAR(10)', 0, None, 0)
+(u'Total', u'NUMERIC(10,2)', 1, None, 0)
+
+InvoiceLine
+(u'InvoiceLineId', u'INTEGER', 1, None, 1)
+(u'InvoiceId', u'INTEGER', 1, None, 0)
+(u'TrackId', u'INTEGER', 1, None, 0)
+(u'UnitPrice', u'NUMERIC(10,2)', 1, None, 0)
+(u'Quantity', u'INTEGER', 1, None, 0)
+
+MediaType
+(u'MediaTypeId', u'INTEGER', 1, None, 1)
+(u'Name', u'NVARCHAR(120)', 0, None, 0)
+
+Playlist
+(u'PlaylistId', u'INTEGER', 1, None, 1)
+(u'Name', u'NVARCHAR(120)', 0, None, 0)
+
+PlaylistTrack
+(u'PlaylistId', u'INTEGER', 1, None, 1)
+(u'TrackId', u'INTEGER', 1, None, 1)
+
+Track
+(u'TrackId', u'INTEGER', 1, None, 1)
+(u'Name', u'NVARCHAR(200)', 1, None, 0)
+(u'AlbumId', u'INTEGER', 0, None, 0)
+(u'MediaTypeId', u'INTEGER', 1, None, 0)
+(u'GenreId', u'INTEGER', 0, None, 0)
+(u'Composer', u'NVARCHAR(220)', 0, None, 0)
+(u'Milliseconds', u'INTEGER', 1, None, 0)
+(u'Bytes', u'INTEGER', 0, None, 0)
+(u'UnitPrice', u'NUMERIC(10,2)', 1, None, 0)
+
+
+Process finished with exit code 0
