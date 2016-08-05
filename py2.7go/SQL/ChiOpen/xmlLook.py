@@ -1,18 +1,15 @@
 import xml.etree.ElementTree as ET
 import pprint
 
-osmName = 'chicago_illinois.osm'
-
-tree = ET.iterparse(osmName)
-
-print(tree)
+osmName = 'sample.osm'
 
 tagList = {}
 
-for tag in tree:
-    if tag in tagList:
-        next(tag)
-    else:
-        tagList.update(tag[1])
+with open(osmName, 'r') as f:
+    for event, element in ET.iterparse(f, events=("end",)):
+        if element.tag not in tagList:
+            tagList[element.tag] = 1
+        else:
+            tagList[element.tag] += 1
 
-print(tagList)
+print tagList
