@@ -8,12 +8,26 @@ street_type_re = re.compile(r'\b\S+\.?$', re.IGNORECASE)
 
 
 expected = ["Street", "Avenue", "Boulevard", "Drive", "Court", "Place", "Square", "Lane", "Road",
-            "Trail", "Parkway", "Commons", "Terrace", "Way", "Highway"]
+            "Trail", "Parkway", "Commons", "Terrace", "Way", "Highway", "Plaza", "Circle"]
 
 # UPDATE THIS VARIABLE
-mapping = { "St": "Street",
-            "St.": "Street"
-            }
+mapping = {"St": "Street",
+           "St.": "Street",
+           "street": "Street",
+           "Ave": "Avenue",
+           "Ave.": "Avenue",
+           "Blvd": "Boulevard",
+           "Cir": "Circle",
+           "Ct": "Court",
+           "Ct.": "Court",
+           "Dr": "Drive",
+           "Dr.": "Drive",
+           "Ln": "Lane",
+           "PLACE": "Place",
+           "Pkwy": "Parkway",
+           "Rd": "Road",
+           "Rd.": "Road",
+           "Trl": "Trail"}
 
 
 def audit_street_type(street_types, street_name):
@@ -58,7 +72,11 @@ def update_name(name, mapping):
 def test():
     st_types = audit(OSMFILE)
     pprint.pprint(st_types.keys())
-    # pprint.pprint(dict(st_types))
+
+    for st_type, ways in st_types.iteritems():
+        for name in ways:
+            better_name = update_name(name, mapping)
+            print name, "=>", better_name
 
 
 if __name__ == '__main__':
