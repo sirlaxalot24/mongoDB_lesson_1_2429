@@ -163,7 +163,7 @@ import cerberus
 
 import schema
 
-OSM_PATH = "example.osm"
+OSM_PATH = "sample.osm"
 
 NODES_PATH = "nodes.csv"
 NODE_TAGS_PATH = "nodes_tags.csv"
