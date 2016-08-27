@@ -71,7 +71,7 @@ def update_name(name, mapping):
 
 def test():
     st_types = audit(OSMFILE)
-    pprint.pprint(st_types.keys())
+    pprint.pprint(st_types)
 
     for st_type, ways in st_types.iteritems():
         for name in ways:

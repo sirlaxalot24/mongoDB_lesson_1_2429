@@ -5,7 +5,7 @@ import csv
 import codecs
 import re
 import xml.etree.cElementTree as ET
-from pprint import pprint as pp
+# from pprint import pprint as pp
 
 import cerberus
 
@@ -32,8 +32,21 @@ WAY_TAGS_FIELDS = ['id', 'key', 'value', 'type']
 WAY_NODES_FIELDS = ['id', 'node_id', 'position']
 
 
+def shape_tag(child):
+    if LOWER_COLON.findall(child['k']):
+        key = child['k'].split(':', 1)[1]
+        type1 = child['k'].split(':', 1)[0]
+        value = child['v']
+    else:
+        key = child['k']
+        value = child['v']
+        type1 = 'regular'
+
+    return key, value, type1
+
+
 def shape_element(element, node_attr_fields=NODE_FIELDS, way_attr_fields=WAY_FIELDS,
-                  problem_chars=PROBLEMCHARS, default_tag_type='regular'):
+                  problem_chars=PROBLEMCHARS):
     """Clean and shape node or way XML element to Python dict"""
 
     node_attribs = {}
@@ -43,11 +56,29 @@ def shape_element(element, node_attr_fields=NODE_FIELDS, way_attr_fields=WAY_FIE
 
     counter = 0
 
-#MY CODE------------------------------------------------------#
-#MY CODE------------------------------------------------------#
+    # MY CODE------------------------------------------------------#
+    # MY CODE------------------------------------------------------#
+
+    # NODE SETUP---------------------------------------------------#
+
+    if element.tag == 'node':
+        for i in node_attr_fields:
+            node_attribs[i] = element.attrib[i]
+
+        for child in element:
+            if child.tag == 'tag':
+                if PROBLEMCHARS.findall(child.attrib['k']):
+                    pass
+                else:
+                    key, value, type1 = shape_tag(child.attrib)
+                    tags.append({'id': element.attrib['id'], 'key': key, 'value': value, 'type': type1})
+    else:
+        pass
+
+    # WAY SETUP---------------------------------------------------#
 
     if element.tag == 'way':
-        for i in WAY_FIELDS:
+        for i in way_attr_fields:
             way_attribs[i] = element.attrib[i]
 
         for child in element:
@@ -56,17 +87,17 @@ def shape_element(element, node_attr_fields=NODE_FIELDS, way_attr_fields=WAY_FIE
                                   'position': counter})
                 counter += 1
 
-
-            #working on way TAGS
             elif child.tag == 'tag':
-                pp(child.attrib)
+                if problem_chars.findall(child.attrib['k']):
+                    pass
+                else:
+                    key, value, type1 = shape_tag(child.attrib)
+                    tags.append({'id': element.attrib['id'], 'key': key, 'value': value, 'type': type1})
     else:
         pass
 
-
-# MY CODE------------------------------------------------------#
-# MY CODE------------------------------------------------------#
-
+    # MY CODE------------------------------------------------------#
+    # MY CODE------------------------------------------------------#
 
     if element.tag == 'node':
         return {'node': node_attribs, 'node_tags': tags}
@@ -106,10 +137,8 @@ class UnicodeDictWriter(csv.DictWriter, object):
     """Extend csv.DictWriter to handle Unicode input"""
 
     def writerow(self, row):
-        super(UnicodeDictWriter, self).writerow({
-                                                    k: (v.encode('utf-8') if isinstance(v, unicode) else v) for k, v in
-                                                    row.iteritems()
-                                                    })
+        super(UnicodeDictWriter, self).writerow({k: (v.encode('utf-8') if isinstance(v, unicode) else v) for k, v in
+                                                row.iteritems()})
 
     def writerows(self, rows):
         for row in rows:
@@ -122,11 +151,11 @@ class UnicodeDictWriter(csv.DictWriter, object):
 def process_map(file_in, validate):
     """Iteratively process each XML element and write to csv(s)"""
 
-    with codecs.open(NODES_PATH, 'w') as nodes_file, \
-            codecs.open(NODE_TAGS_PATH, 'w') as nodes_tags_file, \
-            codecs.open(WAYS_PATH, 'w') as ways_file, \
-            codecs.open(WAY_NODES_PATH, 'w') as way_nodes_file, \
-            codecs.open(WAY_TAGS_PATH, 'w') as way_tags_file:
+    with codecs.open(NODES_PATH, 'wb') as nodes_file, \
+            codecs.open(NODE_TAGS_PATH, 'wb') as nodes_tags_file, \
+            codecs.open(WAYS_PATH, 'wb') as ways_file, \
+            codecs.open(WAY_NODES_PATH, 'wb') as way_nodes_file, \
+            codecs.open(WAY_TAGS_PATH, 'wb') as way_tags_file:
         nodes_writer = UnicodeDictWriter(nodes_file, NODE_FIELDS)
         node_tags_writer = UnicodeDictWriter(nodes_tags_file, NODE_TAGS_FIELDS)
         ways_writer = UnicodeDictWriter(ways_file, WAY_FIELDS)
@@ -159,4 +188,4 @@ def process_map(file_in, validate):
 if __name__ == '__main__':
     # Note: Validation is ~ 10X slower. For the project consider using a small
     # sample of the map when validating.
-    process_map(OSM_PATH, validate=False)
+    process_map(OSM_PATH, validate=True)
