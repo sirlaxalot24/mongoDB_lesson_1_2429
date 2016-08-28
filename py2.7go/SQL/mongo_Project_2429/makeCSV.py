@@ -5,6 +5,7 @@ import csv
 import codecs
 import re
 import xml.etree.cElementTree as ET
+import cleanStreeZip
 # from pprint import pprint as pp
 
 import cerberus
@@ -35,11 +36,24 @@ WAY_NODES_FIELDS = ['id', 'node_id', 'position']
 def shape_tag(child):
     if LOWER_COLON.findall(child['k']):
         key = child['k'].split(':', 1)[1]
+        if key == 'Street' or key == 'street':
+            value = cleanStreeZip.clean_street_name(child['v'])
+        elif key == 'postcode':
+            value = cleanStreeZip.clean_zip(child['v'])
+        else:
+            value = child['v']
+
         type1 = child['k'].split(':', 1)[0]
-        value = child['v']
+
     else:
         key = child['k']
-        value = child['v']
+        if key == 'Street' or key == 'street':
+            value = cleanStreeZip.clean_street_name(child['v'])
+        elif key == 'postcode':
+            value = cleanStreeZip.clean_zip(child['v'])
+        else:
+            value = child['v']
+
         type1 = 'regular'
 
     return key, value, type1
@@ -56,10 +70,10 @@ def shape_element(element, node_attr_fields=NODE_FIELDS, way_attr_fields=WAY_FIE
 
     counter = 0
 
-    # MY CODE------------------------------------------------------#
-    # MY CODE------------------------------------------------------#
+    # MY CODE START------------------------------------------------------#
+    # MY CODE START------------------------------------------------------#
 
-    # NODE SETUP---------------------------------------------------#
+    # NODE SETUP---------------------------------------------------------#
 
     if element.tag == 'node':
         for i in node_attr_fields:
@@ -79,7 +93,7 @@ def shape_element(element, node_attr_fields=NODE_FIELDS, way_attr_fields=WAY_FIE
     else:
         pass
 
-    # WAY SETUP---------------------------------------------------#
+    # WAY SETUP---------------------------------------------------------#
 
     if element.tag == 'way':
         for i in way_attr_fields:
@@ -100,8 +114,8 @@ def shape_element(element, node_attr_fields=NODE_FIELDS, way_attr_fields=WAY_FIE
     else:
         pass
 
-    # MY CODE------------------------------------------------------#
-    # MY CODE------------------------------------------------------#
+    # MY CODE END------------------------------------------------------#
+    # MY CODE END------------------------------------------------------#
 
     if element.tag == 'node':
         return {'node': node_attribs, 'node_tags': tags}

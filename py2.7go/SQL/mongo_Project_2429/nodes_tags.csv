@@ -3740,7 +3740,7 @@ id,key,value,type
 354160276,ele,166,regular
 354160276,name,J E Hinchcliffe Elementary School,regular
 354160276,amenity,school,regular
-354160276,street,Ogle Rd,addr
+354160276,street,Ogle Road,addr
 354160276,created,09/01/1991,gnis
 354160276,postcode,62269,addr
 354160276,state_id,17,gnis
@@ -5892,7 +5892,7 @@ id,key,value,type
 355692896,cuisine,donut,regular
 355692896,website,http://www.krispykreme.com/,regular
 355692896,wikipedia,en:Krispy Kreme,regular
-355692896,street,Bowles Ave.,addr
+355692896,street,Bowles Avenue,addr
 355692896,postcode,63026,addr
 355692896,housename,Krispy Kreme,addr
 355692896,housenumber,1871,addr
@@ -9609,7 +9609,7 @@ id,key,value,type
 367085791,building,yes,regular
 367085791,city,St. Louis,addr
 367085791,state,MO,addr
-367085791,street,South Grand Boulelvard,addr
+367085791,street,South Grand Boulevard,addr
 367085791,postcode,63104,addr
 367085791,reviewed,no,gnis
 367085791,feature_id,2467875,gnis
@@ -9667,7 +9667,7 @@ id,key,value,type
 367086194,amenity,courthouse,regular
 367086194,city,Saint Charles,addr
 367086194,state,MO,addr
-367086194,street,N 3rd St,addr
+367086194,street,N 3rd Street,addr
 367086194,postcode,63301,addr
 367086194,reviewed,no,gnis
 367086194,feature_id,757244,gnis
@@ -10084,7 +10084,7 @@ id,key,value,type
 368069041,website,http://www.cityofedwardsville.com/index.asp?Type=B_BASIC&SEC={FD90EA17-62F6-4E96-AB33-82975234F65D}&DE={6FD37160-EAE7-4EB8-B19B-1E13D5D9918E},regular
 368069041,city,Edwardsville,addr
 368069041,state,IL,addr
-368069041,street,Montclaire Ave,addr
+368069041,street,Montclaire Avenue,addr
 368069041,postcode,62025,addr
 368069041,reviewed,no,gnis
 368069041,feature_id,1736032,gnis
@@ -10916,7 +10916,7 @@ id,key,value,type
 890627923,amenity,place_of_worship,regular
 890627923,religion,christian,regular
 890627923,city,Cottleville,addr
-890627923,street,Motherhead Rd,addr
+890627923,street,Motherhead Road,addr
 890627923,denomination,catholic,regular
 890627923,housenumber,1355,addr
 890738813,highway,turning_circle,regular
@@ -11209,25 +11209,25 @@ id,key,value,type
 1233824874,railway,switch,regular
 1241649452,name,Save-A-Lot,regular
 1241649452,shop,supermarket,regular
-1241649452,street,"3661 Reavis Barracks Road, Saint Louis, MO",addr
+1241649452,street,3661 Reavis Barracks Road,addr
 1241930375,name,La Casa Frijole (The Bean House),regular
 1241930375,amenity,restaurant,regular
 1241930375,cuisine,mexican,regular
-1241930375,street,"1100 Lemay Ferry Road, Saint Louis, MO(314) 631-7220 ‎",addr
+1241930375,street,1100 Lemay Ferry Road,addr
 1242557977,name,The Donut Stop Inc.,regular
 1242557977,source,BON APPÉTIT Magazine,regular
 1242557977,amenity,restaurant,regular
 1242557977,cuisine,american,regular
-1242557977,street,"1101 Lemay Ferry RdSt Louis, MO 63125-1747(314) 631-3333",addr
+1242557977,street,1101 Lemay Ferry RdSt Louis,addr
 1242557977,designation,one of the top 10 donut places in the US.,regular
 1242872381,name,Shop 'n Save,regular
 1242872381,shop,supermarket,regular
 1242872381,website,shopnsave.com,regular
-1242872381,street,"1253 Water Tower PlaceArnold, MO 63010(636) 296-7050",addr
+1242872381,street,1253 Water Tower Place,addr
 1242974232,highway,turning_circle,regular
 1243995533,name,7-Eleven,regular
 1243995533,shop,convenience,regular
-1243995533,street,"260 Hoffmeister Ave, Saint Louis, MO(314) 631-2866",addr
+1243995533,street,260 Hoffmeister Avenue,addr
 1244167030,highway,turning_circle,regular
 1244955965,highway,turning_circle,regular
 1245034007,highway,turning_circle,regular
@@ -11396,7 +11396,7 @@ id,key,value,type
 1657983117,phone,(618)281-7144,regular
 1657983117,amenity,townhall,regular
 1657983117,city,Columbia,addr
-1657983117,street,Rapp Ave.,addr
+1657983117,street,Rapp Avenue,addr
 1657983117,postcode,62236,addr
 1657983117,housenumber,208,addr
 1658024664,highway,turning_circle,regular
@@ -11471,7 +11471,7 @@ id,key,value,type
 1707477457,name,St Louis Bread Company,regular
 1707477457,amenity,restaurant,regular
 1707477457,cuisine,sandwich,regular
-1707477457,street,Green Mount Crossing Dr.,addr
+1707477457,street,Green Mount Crossing Drive,addr
 1707477457,housenumber,3120,addr
 1707487741,name,Beauty Brands,regular
 1707487741,shop,hairdresser,regular
@@ -11621,7 +11621,7 @@ id,key,value,type
 1798613610,atm,yes,regular
 1798613610,name,Electro Savings Credit Union,regular
 1798613610,amenity,bank,regular
-1798613610,street,Tesson Ferry RD,addr
+1798613610,street,Tesson Ferry Road,addr
 1798613610,housenumber,12400,addr
 1803556223,amenity,library,regular
 1818089669,power,tower,regular
@@ -12407,7 +12407,7 @@ id,key,value,type
 1978568615,name,Walgreens,regular
 1978568615,amenity,pharmacy,regular
 1978568615,dispensing,yes,regular
-1978568615,street,Gravois Ave,addr
+1978568615,street,Gravois Avenue,addr
 1978568615,postcode,63116,addr
 1978608484,name,Jay International Foods,regular
 1978608484,shop,supermarket,regular
@@ -12596,7 +12596,7 @@ id,key,value,type
 2062365121,sport,tennis,regular
 2062365121,leisure,sports_centre,regular
 2062365121,building,warehouse,regular
-2062365121,street,N. Main Ctr.,addr
+2062365121,street,N. Main Center,addr
 2062365121,postcode,63301,addr
 2062365121,housenumber,900,addr
 2064010666,source,Bing,regular
@@ -12638,7 +12638,7 @@ id,key,value,type
 2079446757,amenity,restaurant,regular
 2079446757,cuisine,american,regular
 2079446757,website,www.goldencorral.com,regular
-2079446757,street,Greenmount Crossing Rd,addr
+2079446757,street,Greenmount Crossing Road,addr
 2079446757,postcode,62269,addr
 2079446757,housenumber,3360,addr
 2079953663,name,Michaels,regular
@@ -12664,7 +12664,7 @@ id,key,value,type
 2080749853,housenumber,1126,addr
 2081374067,name,Katy Cavins Community Center,regular
 2081374067,amenity,townhall,regular
-2081374067,street,E. 5th St,addr
+2081374067,street,E. 5th Street,addr
 2081374067,postcode,62269,addr
 2081374067,housenumber,308,addr
 2081384765,highway,turning_circle,regular
@@ -12682,7 +12682,7 @@ id,key,value,type
 2085182547,amenity,fast_food,regular
 2085182547,cuisine,burger,regular
 2085182547,website,www.jackinthebox.com,regular
-2085182547,street,N. Illinois St,addr
+2085182547,street,N. Illinois Street,addr
 2085182547,postcode,62226,addr
 2085182547,housenumber,1800,addr
 2085244889,highway,turning_circle,regular
@@ -12697,7 +12697,7 @@ id,key,value,type
 2087856544,parking,surface,regular
 2089271437,name,City of O'Fallon Public Works Office,regular
 2089271437,amenity,townhall,regular
-2089271437,street,W. Second St,addr
+2089271437,street,W. Second Street,addr
 2089271437,postcode,62269,addr
 2089271437,housenumber,518,addr
 2090160175,name,Hampton Inn,regular
@@ -12739,7 +12739,7 @@ id,key,value,type
 2099837217,name,Bank of O'Fallon,regular
 2099837217,source,local knowledge,regular
 2099837217,amenity,bank,regular
-2099837217,street,S. Lincoln Ave,addr
+2099837217,street,S. Lincoln Avenue,addr
 2099837217,postcode,62269,addr
 2099837217,housenumber,901 ,addr
 2100412265,source,Bing,regular
@@ -12886,7 +12886,7 @@ id,key,value,type
 2173838040,name,Luna Cafe,regular
 2173838040,source,Google,regular
 2173838040,amenity,bar,regular
-2173838040,street,E. Chain of Rocks Rd,addr
+2173838040,street,E. Chain of Rocks Road,addr
 2173838040,postcode,62040,addr
 2173838040,housenumber,201,addr
 2173855546,highway,turning_circle,regular
@@ -13049,7 +13049,7 @@ id,key,value,type
 2325760610,name,Oliva on the Hill,regular
 2325760610,amenity,restaurant,regular
 2325760610,cuisine,american,regular
-2325760610,street,Daggett Ave,addr
+2325760610,street,Daggett Avenue,addr
 2325760610,postcode,63110,addr
 2325760610,housenumber,4915,addr
 2330191903,highway,turning_circle,regular
@@ -13081,7 +13081,7 @@ id,key,value,type
 2400565296,wifi,free,regular
 2400565296,amenity,bar,regular
 2400565296,website,http://www.hotshotsnet.com/LOCATIONS/FENTON.aspx,regular
-2400565296,street,S. Hwy Dr.,addr
+2400565296,street,S. Hwy Drive,addr
 2400565296,postcode,63026,addr
 2400565296,housename,Hot Shot's Sports Bar,addr
 2400565296,housenumber,950,addr
@@ -13454,7 +13454,7 @@ id,key,value,type
 2622409342,website,http://www.articulateventures.com/,regular
 2622409342,city,St. Louis,addr
 2622409342,street,Waterman Avenue,addr
-2622409342,postcode,MO 63130,addr
+2622409342,postcode,63130,addr
 2622409342,bitcoin,yes,payment
 2622409342,housenumber,7027,addr
 2622735630,highway,turning_circle,regular
@@ -13551,7 +13551,7 @@ id,key,value,type
 2698408239,amenity,school,regular
 2698408239,city,Wildwood,addr
 2698408239,street,Clayton Road,addr
-2698408239,postcode,MO,addr
+2698408239,postcode,00000,addr
 2698408239,housenumber,17050,addr
 2700222771,railway,level_crossing,regular
 2700224053,railway,level_crossing,regular
@@ -13685,7 +13685,7 @@ id,key,value,type
 2867855592,phone,(314) 771-9001,regular
 2867855592,website,http://davidsdesignsalon.com/,regular
 2867855592,city,St. Louis,addr
-2867855592,street,South Grand Boulelvard,addr
+2867855592,street,South Grand Boulevard,addr
 2867855592,postcode,63104,addr
 2867855592,opening_hours,Tuesday -Thursday 11:00 am – 7:00 pm; Friday 9:00 am – 5:00 pm; Saturday 8:00 am – 3:00 pm,regular
 2867855592,housenumber,2233,addr
@@ -13929,7 +13929,7 @@ id,key,value,type
 3028518280,operator,Sumbits,regular
 3028518280,city,St. Louis,addr
 3028518280,state,MO,addr
-3028518280,street,South Grand Boulelvard,addr
+3028518280,street,South Grand Boulevard,addr
 3028518280,currency:XBT,yes,regular
 3028518280,postcode,63118,addr
 3028518280,drive_through,no,regular
@@ -14000,7 +14000,7 @@ id,key,value,type
 3180979635,source,Local knowledge,regular
 3180979635,website,http://www.trovagifts.com/,regular
 3180979635,city,St Louis,addr
-3180979635,street,N 7th street,addr
+3180979635,street,N 7th Street,addr
 3180979635,designation,gifts,regular
 3180979635,postcode,63101,addr
 3180979635,housename,MX,addr
@@ -14014,7 +14014,7 @@ id,key,value,type
 3188970961,website,http://unitedprovisions.com/,regular
 3188970961,operator,Jay International Foods,regular
 3188970961,city,St. Louis,addr
-3188970961,street,Delmar Blvd,addr
+3188970961,street,Delmar Boulevard,addr
 3188977325,name,Kate Chopin,regular
 3188977325,tourism,attraction,regular
 3188977325,website,http://www.stlouiswalkoffame.org/inductees/kate-chopin.html,regular
@@ -14061,7 +14061,7 @@ id,key,value,type
 3189030144,amenity,pub,regular
 3189030144,website,http://www.dublinerstl.com/,regular
 3189030144,city,St louis,addr
-3189030144,street,Washington AVE,addr
+3189030144,street,Washington Aveneu,addr
 3189030144,designation,Irish Pub,regular
 3189030144,postcode,63101,addr
 3189030144,housename,Bee Hat,addr
